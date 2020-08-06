@@ -20,12 +20,15 @@
 		</main>
 		<footer>
 			<div class="container">
-				<p>テストaaa</p>
+				<p id ="test">テストaaa</p>
 			</div>
 		</footer>
 		<script>
 			'use strict';
-			window.alert("テスト");
+			window.alert("テスト"); <!--アラートの設定-->
+			document.getElementById("test").textContent = new Date();<!--コンテンツの書換え-->
+			console.log(document.getElementById("test").textContent);<!--コンソールに出力-->
+			console.log(window.confirm("準備OK?"))<!--確認ダイアログ-->
 		</script>
 	</body>
 </html>
