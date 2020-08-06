@@ -29,7 +29,10 @@
 			document.getElementById("test").textContent = new Date();<!--コンテンツの書換え-->
 			console.log(document.getElementById("test").textContent);<!--コンソールに出力-->
 			console.log(window.confirm("準備OK?"))<!--確認ダイアログ-->
-			window.prompt("テスト");<!--プロンプト出力-->
+			const answer = window.prompt("テスト");
+			if(answer === 'yes'){
+				window.alert('テストテスト');
+			}<!--プロンプト出力-->
 		</script>
 	</body>
 </html>
