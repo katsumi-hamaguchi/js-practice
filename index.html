@@ -25,6 +25,7 @@
 		</footer>
 		<script>
 			'use strict';
+
 			window.alert("テスト"); <!--アラートの設定-->
 			document.getElementById("test").textContent = new Date();<!--コンテンツの書換え-->
 			console.log(document.getElementById("test").textContent);<!--コンソールに出力-->
@@ -32,8 +33,19 @@
 			const answer = window.prompt("テスト");
 			if(answer === 'yes'){
 				window.alert('テストテストテス');
-				
 			}<!--プロンプト出力-->
+
+			let enemy = 100;
+			let count = 0;
+			window.alert('スタート');
+			while(enemy > 0){
+				const attack = Math.floor(Math.random()*30)+1;
+				console.log('敵に' + attack + 'のダメージ');
+				enemy -= attack;
+				count += 1;
+			}
+			console.log(count + '回で敵を倒した');<!--繰り返し実装-->
+
 		</script>
 	</body>
 </html>
