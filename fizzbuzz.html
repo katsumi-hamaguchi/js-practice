@@ -1,0 +1,50 @@
+<!Doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+	<title>fizzbuzz</title>
+	</head>
+	<body>
+		<header>
+			<div class="container">
+			    <h1>fizzbuzz</h1>
+			</div>
+		</header>
+
+		<main>	
+			<div class="container">
+				<section>
+
+				</section>
+			</div>
+		</main>
+		<footer>
+			<div class="container">
+				<p id ="test">fizzbuzz</p>
+			</div>
+		</footer>
+		<script>
+			'use strict';
+			function fizzbuzz(num){
+				if(num % 3 == 0 && num % 5 === 0){
+					return "fizzbuzz";
+				}else if(num % 3 === 0 ){
+					return "fizz";
+				}else if (num % 5 === 0){
+					return "buzz;"
+				}else {
+					return num;				
+				}
+			}
+			console.log(fizzbuzz("開始"));
+			console.log(fizzbuzz("15"));
+
+			let i = 1;
+			while(i <= 30){
+				console.log(fizzbuzz(i));
+				i += 1;
+			}
+
+        </script>
+	</body>
+</html>
