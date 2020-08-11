@@ -26,9 +26,14 @@
 		<script>
             'use strict';
             let array = ['test0','test1','test2','test3','test4','test5','test6'];
+            array.push("test7")<!--配列に項目を追加-->
             for(let item of array){
-                console.log(item);
-            }
+                console.log(item);<!--項目を表示-->
+                const li = `<li>${item}<li>`;<!--項目毎に<li></li>で囲む。※itemをarrayに変更すると、全項目を囲んだものを、複数表示する。テンプレート文字列-->
+                console.log(li);
+                const licopy ="<li>"+item+"<li>";<!--上記のテンプレート文字列と同様の形-->
+                console.log(licopy);
+            }<!--for...of使用※let変数名of配列名-->
         </script>
 	</body>
 </html>
