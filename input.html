@@ -1,0 +1,31 @@
+<!Doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+	<title>input</title>
+	</head>
+	<body>
+
+		<main>	
+			<div class="container">
+				<section>
+                  <form action="#" id="form">
+                    <input type ="text" name ="word">
+                    <input type ="submit" value="検索">
+                  </form>
+                  <p id="output"></p>
+				</section>
+			</div>
+		</main>
+		
+		<script>
+            'use strict';
+            document.getElementById("form").onsubmit = function(){
+              const search = document.getElementById("form").word.value;
+              document.getElementById("output").textContent = "search"
+              <!--イベント追加。検索ボタンを押すとテキストフォームに入力したものが、pタグに表示-->
+              console.log("検索ボタンをクリックされました");
+            }<!--イベント追加。検索ボタンを押すとコンソールに表示される-->
+        </script>
+	</body>
+</html>
