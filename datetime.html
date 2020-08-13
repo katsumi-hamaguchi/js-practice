@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>datetaime</title>
+</head>
+<body>
+    <div class="container">
+        <section>
+            <p id="time">aaa</p>
+
+        </section>
+    </div>
+    <script>
+        'use strict'
+
+        const now = new Date()
+        const year = now.getFullYear()
+        const month = now.getMonth()
+        const date = now.getDate()
+        const hour = now.getHours()
+        const min = now.getMinutes()
+        const second = now.getSeconds()
+        
+
+        const output = `${year}/${month+1}/${date} ${hour}:${min}:${second}`
+        document.getElementById("time").textContent= output <!--現在の時刻を表示-->
+    </script>
+</body>
+</html>
