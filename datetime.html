@@ -22,9 +22,16 @@
         const hour = now.getHours()
         const min = now.getMinutes()
         const second = now.getSeconds()
+
+        let ampm = "";
+        if(hour<12){
+            ampm ="a.m."
+        }else{
+            ampm ="p.m."
+        }
         
 
-        const output = `${year}/${month+1}/${date} ${hour}:${min}:${second}`
+        const output = `${year}/${month+1}/${date} ${hour%12}:${min}:${second}${ampm}`
         document.getElementById("time").textContent= output <!--現在の時刻を表示-->
     </script>
 </body>
