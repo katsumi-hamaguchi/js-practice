@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <div class="center">
+            <div>
+                <img src="img1.jpg" img="bigimg">
+            </div>
+            <ul>
+                <li><img src="thumb-img1.jpg" class="thumb" data-image="img1.jpg"></li>
+                <li><img src="thumb-img2.jpg" class="thumb" data-image="img2.jpg"></li>
+                <li><img src="thumb-img3.jpg" class="thumb" data-image="img3.jpg"></li>
+                <li><img src="thumb-img4.jpg" class="thumb" data-image="img4.jpg"></li>
+            </ul>
+        </div>
+    </section>
+
+    <style>
+                section img{
+            max-width: 100%;
+        }
+
+        .center{
+            margin: 0 auto 0 auto;
+            max-width: 90%;
+            width: 500px;
+        }
+
+        ul{
+            display: flex;
+            margin: 0;
+            padding: 0%;
+            list-style-type: none;
+        }
+
+        li{
+            flex: 1 1 auto;
+        }
+    </style>
+
+    <script>
+        "use strict"
+
+        const thumbs = document.querySelectorAll(".thumb")
+        thumbs.forEach(function(item,index){
+            item.onclick = function(){
+                console.log(this.dataset.image)
+            }
+        })
+    </script>
+</body>
+</html>
