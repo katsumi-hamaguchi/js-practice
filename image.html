@@ -9,13 +9,13 @@
     <section>
         <div class="center">
             <div>
-                <img src="img1.jpg" img="bigimg">
+                <img src="img1.jpg" id="bigimg">
             </div>
             <ul>
-                <li><img src="thumb-img1.jpg" class="thumb" data-image="img1.jpg"></li>
-                <li><img src="thumb-img2.jpg" class="thumb" data-image="img2.jpg"></li>
-                <li><img src="thumb-img3.jpg" class="thumb" data-image="img3.jpg"></li>
-                <li><img src="thumb-img4.jpg" class="thumb" data-image="img4.jpg"></li>
+                <li><img src="thumb-img1.jpg" class="thumb" data-image="thumb-img1.jpg"></li>
+                <li><img src="thumb-img2.jpg" class="thumb" data-image="thumb-img2.jpg"></li>
+                <li><img src="thumb-img3.jpg" class="thumb" data-image="thumb-img3.jpg"></li>
+                <li><img src="thumb-img4.jpg" class="thumb" data-image="thumb-img4.jpg"></li>
             </ul>
         </div>
     </section>
@@ -51,6 +51,7 @@
         thumbs.forEach(function(item,index){
             item.onclick = function(){
                 console.log(this.dataset.image)
+                document.getElementById("bigimg").src = this.dataset.image
             }
         })
     </script>
