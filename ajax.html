@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ajax</title>
+
+    <style>
+        .list{
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+
+        .list h2{
+            margin: 0 0 2em 0;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        .seminar{
+            float: left;
+            margin: 10px 10px 10px 0;
+            border: 1px solid #23628f;
+            padding: 4px;
+            width: 25%;
+        }
+
+        .check{
+            margin: 0;
+            padding: 8px;
+            font-size: 12px;
+            color: #ffffff;
+            text-align: center;
+            cursor: pointer;
+
+        }
+
+        .red{
+            background-color: #e33a6d;
+        }
+
+        .green{
+            background-color: #7bc52e;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <ul class="list">
+            <li class="seminar" id="js">
+                <h2>勉強会１</h2>
+                <p class="check">空き状況を確認</p>
+            </li>
+
+            <li class="seminar" id="security">
+                <h2>勉強会２</h2>
+                <p class="check">空き状況を確認</p>
+            </li>
+
+            <li class="seminar" id="aiux">
+                <h2>勉強会３</h2>
+                <p class="check">空き状況を確認</p>
+            </li>
+        </ul>
+    </section>
+
+    <script src="jquery-3.4.1.min.js"></script>
+    <script>
+        'use strict'
+
+        $(document).ready(function(){
+            $.ajax({url:'data.json',dataType:"json"})
+            .done(function(data){
+                console.log(data)
+
+                data.forEach(function(item,index){
+                    console.log(item)
+                })
+            })
+            .fail(function(){
+                window.alert("読み込みのエラー")
+            })
+        })
+    </script>
+</body>
+</html>
