@@ -34,6 +34,7 @@
             color: #ffffff;
             text-align: center;
             cursor: pointer;
+            background-color: #23628f;
 
         }
 
@@ -77,11 +78,26 @@
 
                 data.forEach(function(item,index){
                     console.log(item)
+                    console.log(index)<!--配列の番号-->
+
+                    if(item.crowded === 'yes'){
+                        const idName = "#"+item.id
+                        $(idName).find(".check").addClass("crowded")
+                    }
                 })
             })
             .fail(function(){
                 window.alert("読み込みのエラー")
             })
+        
+
+            $(".check").on("click",function(){
+                if($(this).hasClass("crowded")){
+                    $(this).text("残りわずか").addClass("red")
+                }else{
+                    $(this).text("余裕あり").addClass("green")
+                }
+                })
         })
     </script>
 </body>
