@@ -115,7 +115,7 @@
             $(".check").on("click",function(){
                 if($(this).hasClass("crowded")){
                     $(this).text("残りわずか").addClass("red")
-                }if($(this).hasClass("test1")){
+                }else if($(this).hasClass("test1")){
                     $(this).text("余裕あり").addClass("green")
                 }else{
                     $(this).text("キャンセル待ち").addClass("pink")
