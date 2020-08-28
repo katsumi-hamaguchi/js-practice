@@ -46,6 +46,10 @@
             background-color: #7bc52e;
         }
 
+        .pink{
+            background-color: pink;
+        }
+
         
     </style>
 </head>
@@ -71,6 +75,11 @@
                 <h2>勉強会4</h2>
                 <p class="check">空き状況を確認</p>
             </li>
+
+            <li class="seminar" id="test">
+                <h2>勉強会5</h2>
+                <p class="check">空き状況を確認</p>
+            </li>
         </ul>
     </section>
 
@@ -91,6 +100,11 @@
                         const idName = "#"+item.id
                         $(idName).find(".check").addClass("crowded")
                     }
+
+                    if(item.crowded === 'no'){
+                        const idName = "#"+item.id
+                        $(idName).find(".check").addClass("test1")
+                    }
                 })
             })
             .fail(function(){
@@ -101,8 +115,10 @@
             $(".check").on("click",function(){
                 if($(this).hasClass("crowded")){
                     $(this).text("残りわずか").addClass("red")
-                }else{
+                }else if($(this).hasClass("test1")){
                     $(this).text("余裕あり").addClass("green")
+                }else{
+                    $(this).text("キャンセル待ち").addClass("pink")
                 }
                 })
         })
