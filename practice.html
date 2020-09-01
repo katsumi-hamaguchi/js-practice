@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        img{
+            width: 150px;
+        }
+
+        .main{
+            font-size: 20px;
+            color: red;
+        }
+
+        .sub{
+            font-size: 15px;
+            color: green;
+        }
+
+        .sub2{
+            font-size: 10px;
+            color: blue;
+        }
+
+        .back{
+            background-color: yellow;
+            width: 170px;
+            
+        }
+
+        .back2{
+            background-color: red;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="main">
+            js練習用のファイル
+        </div>
+        <img src="./thumb-img1.jpg" alt="">
+    </section>
+
+    <section>
+        <div class="sub">
+            js練習用のファイルサブタイトル
+        </div>
+        <img src="./thumb-img2.jpg" alt="">
+    </section>
+
+    <section>
+        <div class="sub2">
+            js練習用のファイルサブタイトル2
+        </div>
+        <div class="back">
+            <img src="./thumb-img3.jpg" alt="">
+        </div>
+    </section>
+
+    <script src="jquery-3.4.1.min.js"></script>
+    <script>
+        $(".back,.sub2").on("click",function(){
+            $(this).addClass("back2")
+        }
+    )
+    </script>
+</body>
+</html>
