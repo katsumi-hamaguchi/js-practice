@@ -23,6 +23,7 @@
         .sub2{
             font-size: 10px;
             color: blue;
+            width: 170px;
         }
 
         .back{
@@ -32,8 +33,12 @@
         }
 
         .back2{
-            background-color: red;
+            background-color: green;
             font-size: 30px;
+        }
+
+        .back3{
+            width: 340px;
         }
     </style>
 </head>
@@ -57,7 +62,7 @@
             js練習用のファイルサブタイトル2
         </div>
         <div class="back">
-            <img src="./thumb-img3.jpg" alt="">
+            <img class="img1" src="./thumb-img3.jpg" alt="">
         </div>
     </section>
 
@@ -66,6 +71,11 @@
         $(".back,.sub2").on("click",function(){
             $(this).addClass("back2")
         }
+    )
+
+    $(".img1,.back,.sub2").on("click",function(){
+            $(this).addClass("back3")
+        } <!--クラスの付与は同時に２つ以上出来ないかも？イベント追加の箇所を複数選択で現在は対応-->
     )
     </script>
 </body>
