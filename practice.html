@@ -47,14 +47,14 @@
         <div class="main">
             js練習用のファイル
         </div>
-        <img src="./thumb-img1.jpg" alt="">
+        <img class="img1" src="./thumb-img1.jpg" alt="">
     </section>
 
     <section>
         <div class="sub">
             js練習用のファイルサブタイトル
         </div>
-        <img src="./thumb-img2.jpg" alt="">
+        <img class="img1" src="./thumb-img2.jpg" alt="">
     </section>
 
     <section>
@@ -68,8 +68,9 @@
 
     <script src="jquery-3.4.1.min.js"></script>
     <script>
-        $(".back,.sub2").on("click",function(){
-            $(this).addClass("back2")
+
+    $(".main,.sub,.back,.sub2").on("click",function(){
+        $(this).addClass("back2")
         }
     )
 
