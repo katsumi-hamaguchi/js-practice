@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let m = new Map()
+        m.set('dog','わんわん')
+        m.set('cat','にゃー')
+        m.set('mouse','ちゅー')
+        
+        console.log(m)
+        console.log(m.size)
+        console.log(m.has('fish'))
+        console.log(m.has('cat'))
+
+
+        let m1 = new Map()
+        m1.set(NaN,'hoge')
+        console.log(m1.get(NaN))
+
+        let key = {}
+        let m2 = new Map()
+        m2.set(key,'hoge')
+        console.log(m2.get(key))
+
+    </script>
+</body>
+</html>
