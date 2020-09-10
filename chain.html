@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let test1= function(){}
+
+        test1.prototype ={
+            write:function(){
+                console.log('書く')
+                document.write('書く')
+            }
+        }
+
+        let test2 = function(){
+            test1.call(this)
+        }
+
+        test2.prototype = new test1()
+        test2.prototype.test3 =function(){
+            console.log('書く書く')
+            document.write('書く書く')
+        }
+
+        let t = new test2()
+        t.write()
+        document.write('<br>')
+        t.test3()
+
+    </script>
+</body>
+</html>
