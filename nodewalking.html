@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label for="food">一番すきな食べ物は？</label>
+        <select name="" id="food">
+            <option value="ラーメン">ラーメン</option>
+            <option value="餃子">餃子</option>
+            <option value="焼肉">焼肉</option>
+        </select>
+        <input type="submit" value="決定">
+    </form>
+
+    <script>
+        let test1 = document.getElementById("food")
+        var test2 = test1.childNodes
+        for(let i=0 ,len =test2.length; i<len; i++){
+            let test3 = test2.item(i)
+            if(test3.nodeType===1){
+                console.log(test3.value)
+                document.write(test3.value)
+            }
+        }
+    </script>
+</body>
+</html>
