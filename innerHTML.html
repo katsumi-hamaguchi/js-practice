@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <label for="name">名前</label>
+        <input type="text" id ="name" name="name" size="30">
+        <input type="date" id="date" value="送信">
+        <input type="button" id="btn" value="送信">
+    </form>
+
+    <div id="result"></div>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded',function(){
+            document.getElementById("btn").addEventListener("click",function(){
+                let name = document.getElementById("name")
+                let result = document.getElementById("result")
+                let date = document.getElementById("date")
+                result.innerHTML ="こんにちは"+name.value +"さん。"  +date.value +"に予約を入れました"
+        },false)
+        },false)
+    </script>
+</body>
+</html>
