@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <label for="name">名前</label>
+        <input type="text" name="name" id="name" size="30">
+
+        <div>すきな食べ物は？
+            <label><input type="checkbox" name="food" value="ラーメン">ラーメン</label>
+            <label><input type="checkbox" name="food" value="餃子">餃子</label>
+            <label><input type="checkbox" name="food" value="焼肉">焼肉</label>
+        </div>
+        <input type="button" id="btn" value="送信">
+    </form>
+    <div id="result">
+
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded",function(){
+            document.getElementById("btn").addEventListener("click",function(){
+                let name = document.getElementById("name")
+                name.value="鈴木aaa"
+                console.log(name.value)
+            })
+        })
+
+        document.addEventListener("DOMContentLoaded",function(){
+            document.getElementById("btn").addEventListener("click",function(){
+                let result =[]
+                let foods = document.getElementsByName("food")
+
+                for(var i=0,len=foods.length; i<len; i++){
+                    let food =foods.item(i)
+                    if(food.checked){
+                        result.push(food.value)
+                    }
+                }
+                window.alert(result.toString())
+            })
+        })
+    </script>
+</body>
+</html>
