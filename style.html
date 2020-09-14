@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="elem">色が変化する黄色</div>
+    <div id="elem2">色が変化する青色、黄色</div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded",function(){
+            let elem = document.getElementById("elem")
+            let elem2 = document.getElementById("elem2")
+
+            elem.addEventListener("mouseover",function(){
+                this.style.backgroundColor ="Yellow"
+            })
+
+            elem.addEventListener("mouseout",function(){
+                this.style.backgroundColor=""
+            })
+
+            elem2.addEventListener("mouseover",function(){
+                this.style.backgroundColor ="blue"
+            })
+
+            elem2.addEventListener("mouseout",function(){
+                this.style.backgroundColor="yellow"
+            })
+        })
+    </script>
+</body>
+</html>
