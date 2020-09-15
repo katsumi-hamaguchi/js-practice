@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" id="btn" value="タイマーストップ">
+    <div id="result"></div>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded",function(){
+            let timer = window.setInterval(
+                function(){
+                    let dat = new Date()
+                    document.getElementById("result").textContent = dat.toLocaleTimeString()
+                },1000
+            )
+
+            document.getElementById("btn").addEventListener("click",function(){
+                window.clearInterval(timer)
+            })
+        })
+    </script>
+</body>
+</html>
