@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <label for="isbn">書籍：</label>
+        <select name="isbn" id="isbn">
+            <option value="">書籍名を選択してください</option>
+            <option value="978-4-7741-8030-4">Javaポケットリファレンス</option>
+            <option value="978-4-7741-8030-1">Swiftポケットリファレンス</option>
+            <option value="978-4-7741-8030-2">独学PHP　第３版</option>
+            <option value="978-4-7741-8030-3">独学ASP.NET　第５版</option>
+            <option value="978-4-7741-8030-5">アプリを作ろう</option>
+        </select>
+    </form>
+
+    <a href ="JavaScript:history.back()">戻る</a>
+    <a href ="JavaScript:history.forward()">進む</a>
+
+    <script>
+        document.addEventListener("DOMContentLoaded",function(){
+            document.getElementById("isbn").addEventListener("change",function(){
+                location.href = "http://www.wings.min.to/index.php/-/A-03/"+this.value
+            })
+        })
+    </script>
+</body>
+</html>
