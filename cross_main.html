@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input type="text" id="message" size="80">
+        <input type="button" id="btn" value="送信">
+    </form>
+
+    <iframe id="frame" src="http://www.wings.msn.to/" width="1440" height="800"></iframe>
+
+    <script>
+        document.addEventListener("DOMContentLoaded",function(){
+            let target ="http://www.wings.msn.to"
+
+            document.getElementById("btn").addEventListener("click",function(){
+                document.getElementById("frame").contentWindow.postMessage(
+                    document.getElementById("message").value,target
+                )
+            })
+        })
+    </script>
+</body>
+</html>
