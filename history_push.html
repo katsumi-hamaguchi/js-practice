@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <body>
+        <input type="button" id="btn" value="カウントアップ">
+    <span id="result">-</span>回のクリック
+
+        <script>
+            let count=0
+            let result=document.getElementById("result")
+
+            document.getElementById("btn").addEventListener("click",function(){
+                result.textContent= ++count
+                
+            })
+        </script>
+
+</body>
+</html>
