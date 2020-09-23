@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>練習用のファイル</title>
+</head>
+<body>
+    <h1>練習用タイトル</h1>
+    <div id="test1">内容①</div>
+    <div id="test2">内容2</div>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script>
+        $("#test1").hover(
+            function(){
+                $("#test2").text("テスト１変更")
+                $("#test2").slideUp()
+            },
+
+            function(){
+                $("#test2").text("テスト戻し")
+                $("#test2").slideDown()
+            }
+        )
+    </script>
+</body>
+</html>
