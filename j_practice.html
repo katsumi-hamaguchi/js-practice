@@ -7,21 +7,24 @@
     <link rel="stylesheet" href="j_practice.css">
 </head>
 <body>
-    <header>
-        <div id="menu-bt">
-           <img src="https://webmist.info/image/spmenu.png" id="drower" />
+    <nav>
+        <div class="drawer">
+         <a class="navbar_brand" href="#">Navbar</a>
+         <div class="navbar_toggle">
+          <span class="navbar_toggle_icon"></span>
+          <span class="navbar_toggle_icon"></span>
+          <span class="navbar_toggle_icon"></span>
+         </div>
         </div>
-        </header>
-        
-        <nav id="menu">
-        <ul>
-           <li><a href="#">トップ</a></li>
-           <li><a href="#">サイト情報</a></li>
-           <li><a href="#">商品情報</a></li>
-           <li><a href="#">アクセス</a></li>
-        </ul>
-        </nav>
-        
+        <div class="menu">
+         
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Service</a></li>
+          <li><a href="#">access</a></li>
+         
+        </div>
+    </nav>
 
     <h1>練習用タイトル</h1>
     <div id="test1">内容①</div>
@@ -39,6 +42,15 @@
                 $("#test2").slideDown()
             }
         )
+    </script>
+
+<script>
+    $(function() {
+     $('.navbar_toggle').on('click', function () {
+      $(this).toggleClass('open');
+      $('.menu').toggleClass('open');
+     });
+    });
     </script>
    
 </body>
