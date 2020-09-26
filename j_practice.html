@@ -29,6 +29,11 @@
     <h1>練習用タイトル</h1>
     <div id="test1">内容①</div>
     <div id="test2">内容2</div>
+
+    <div id="test3">
+        <p><img src="./thumb-img1.jpg" alt=""></p>
+        <button>Show</button>
+    </div>
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <script>
         $("#test1").hover(
@@ -44,13 +49,19 @@
         )
     </script>
 
-<script>
-    $(function() {
-     $('.navbar_toggle').on('click', function () {
-      $(this).toggleClass('open');
-      $('.menu').toggleClass('open');
-     });
-    });
+    <script>
+        $(function() {
+        $('.navbar_toggle').on('click', function () {
+        $(this).toggleClass('open');
+        $('.menu').toggleClass('open');
+        });
+        });
+    </script>
+
+    <script>
+        $("#test3 button").click(function() {
+        $("#test3 img").show('slow');
+        }); 
     </script>
    
 </body>
