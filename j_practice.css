@@ -41,3 +41,8 @@ nav{
     -webkit-transform:translateX(0);
     transform:translateX(0);
    }
+
+
+   #test3 img {
+    display: none;
+  }
