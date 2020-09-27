@@ -34,6 +34,17 @@
         <p><img src="./thumb-img1.jpg" alt=""></p>
         <button>Show</button>
     </div>
+
+    <div id="jqs-3">
+        <div class="clear-fix">
+            <div class="blue">aaa</div>
+            <div class="blue">aaa</div>
+            <div class="blue">aaa</div>
+            <div class="blue">aaa</div>
+        </div>
+        <button >Show</button>
+    </div>
+
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <script>
         $("#test1").hover(
@@ -62,6 +73,12 @@
         $("#test3 button").click(function() {
         $("#test3 img").show('slow');
         }); 
+    </script>
+
+    <script>
+        $("#jqs-3 button").click(function() {
+        $("#jqs-3 div.blue").show('slow');
+        });
     </script>
    
 </body>
