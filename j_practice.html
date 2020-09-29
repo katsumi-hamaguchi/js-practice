@@ -52,6 +52,13 @@
         <button class="fadeTo100">表示</button>
     </div>
 
+    <div id="jqs-11">
+        <dl>
+          <dt>開閉パネル<span> Open</span></dt>
+          <dd><p>これは開閉パネルのサンプルです。</p></dd>
+        </dl>
+    </div>
+
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <script>
         $("#test1").hover(
@@ -100,5 +107,21 @@
         }); 
     </script>
    
+
+   <script>
+       $("#jqs-11 dd").css("display", "none");
+ 
+    $("#jqs-11 dt").click(function() {
+    if($("#jqs-11 dd").css("display") == "block") {
+        $("#jqs-11 dd:not(:animated)").slideUp("slow", function() {
+            $("#jqs-11 dt span").text(" ▼ Open");
+        });
+    }else{
+        $("#jqs-11 dd").slideDown("slow", function() {
+        $("#jqs-11 dt span").text(" ▲ Close");
+        });
+    }
+    });
+   </script>
 </body>
 </html>
