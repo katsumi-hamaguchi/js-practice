@@ -52,3 +52,21 @@ nav{
     display: none;
     float: left;
   }
+
+
+  #jqs-11 dl {
+    width: 300px;
+  
+  }
+  #jqs-11 dt {
+    background-color: #4E539F;
+    color: #fff;
+    cursor: pointer; /* カーソルの形状をポインタへ */
+    text-align: center;
+    padding: 5px 0;
+  }
+  #jqs-11 dd {
+    border: 1px solid #C2D1F8;
+    height:200px;
+    margin-left: 0;
+  }
