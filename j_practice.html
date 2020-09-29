@@ -59,6 +59,11 @@
         </dl>
     </div>
 
+    <div id="jqs-12">
+        <button>表示</button>
+        <p><img src="./thumb-img2.jpg" alt=""></p>  
+    </div>
+
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <script>
         $("#test1").hover(
@@ -122,6 +127,18 @@
         });
     }
     });
+   </script>
+   <script>
+        $("#jqs-12 p").css("display", "none");
+        $("#jqs-12 button").click(function() {
+        $("#jqs-12 p:not(:animated)").slideToggle('slow', function() {
+            if($(this).css('display') == 'none'){
+            $("#jqs-12 button").text('表示');
+            }else{
+            $("#jqs-12 button").text('非表示');
+            }   
+        });
+        });
    </script>
 </body>
 </html>
