@@ -64,6 +64,8 @@
         <p><img src="./thumb-img2.jpg" alt=""></p>  
     </div>
 
+    <p id="page-top"><a href="#wrap">PAGE TOP</a></p>
+
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <script>
         $("#test1").hover(
@@ -139,6 +141,28 @@
             }   
         });
         });
+   </script>
+
+   <script>
+            $(function() {
+                var topBtn = $('#page-top');    
+                topBtn.hide();
+                //スクロールが100に達したらボタン表示
+                $(window).scroll(function () {
+                    if ($(this).scrollTop() > 1) {
+                        topBtn.fadeIn();
+                    } else {
+                        topBtn.fadeOut();
+                    }
+                });
+                //スクロールしてトップ
+                topBtn.click(function () {
+                    $('body,html').animate({
+                        scrollTop: 0
+                    }, 500);
+                    return false;
+                });
+            });
    </script>
 </body>
 </html>
