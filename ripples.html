@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ripple.css">
+</head>
+<body>
+    <div class="ripples"></div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="./jquery.ripples-min.js"></script>
+    <script>
+        $(".ripples").ripples({
+            dropRadius: 20,
+            perturbance: 0.03,
+            resolution: 256,
+            interactive: true,
+            crossOrigin: ""
+        });
+        </script>
+</body>
+</html>
