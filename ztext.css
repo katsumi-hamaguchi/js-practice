@@ -9,3 +9,11 @@ body {
   .z-layer:not(:first-child) {
     color: #0bd;
   }
+
+  h2 {
+    color: red;
+    font-size: 10rem;
+  }
+  .z-layer:not(:first-child) {
+    color: #0bd;
+  }
