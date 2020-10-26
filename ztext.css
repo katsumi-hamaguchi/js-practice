@@ -13,6 +13,7 @@ body {
   h2 {
     color: red;
     font-size: 10rem;
+    margin-left: 500px;
   }
   .z-layer:not(:first-child) {
     color: #0bd;
@@ -21,7 +22,7 @@ body {
   h3 {
     color: green;
     font-size: 10rem;
-    margin-left: 400px;
+    margin-left: 500px;
   }
   .z-layer:not(:first-child) {
     color: #0bd;
